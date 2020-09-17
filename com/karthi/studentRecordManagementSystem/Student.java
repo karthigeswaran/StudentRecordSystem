@@ -18,6 +18,7 @@ public class Student {
     public Student(String n, String c){
         name = n;
         clss = c;
+        resultIdList = new ArrayList<>();
     }
 
     void setName(String n){

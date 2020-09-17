@@ -41,7 +41,7 @@ public class ResultRecord {
 		for(Object object : subjectArray){
             JSONObject subjectJson = (JSONObject)object;
             String subjectName = (String)subjectJson.get("Name");
-            Integer mark = (Integer)subjectJson.get("Mark");
+            Integer mark = ((Long)subjectJson.get("Mark")).intValue();
             Subject subject = new Subject(subjectName, mark);
             subjectList.add(subject);
         }

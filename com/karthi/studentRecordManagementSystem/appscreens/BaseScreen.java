@@ -1,5 +1,6 @@
 package com.karthi.studentRecordManagementSystem.appscreens;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class BaseScreen {
@@ -31,6 +32,15 @@ public abstract class BaseScreen {
         run();
     }
 
+    protected Integer getInteger(){
+        try{
+            return scanner.nextInt();
+        }catch(InputMismatchException e){
+            System.out.print("Enter valid number.");
+            scanner.nextLine();
+            return getInteger();
+        }
+    }
     protected abstract void run(); 
 
 }

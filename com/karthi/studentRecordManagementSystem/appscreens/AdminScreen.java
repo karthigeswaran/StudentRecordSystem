@@ -15,7 +15,7 @@ public class AdminScreen extends BaseScreen {
         boolean runFlag = true;
 		while(runFlag){
 			System.out.print("Enter Option: ");
-			switch(scanner.nextInt()){
+			switch(getInteger()){
                 case 1:
                     System.out.print("Enter student ID: ");
                     appContext.setStudentID(scanner.next());

@@ -20,7 +20,7 @@ public class UpdateResultScreen extends BaseScreen {
         boolean fg = true;
         while(fg){
             System.out.println("Enter options:");
-            switch(scanner.nextInt()){
+            switch(getInteger()){
                 case 1:
                     changeName(result);
                     break;
@@ -51,7 +51,7 @@ public class UpdateResultScreen extends BaseScreen {
         System.out.print("Subject name: ");
         String subjectName = scanner.next();
         System.out.print("Marks: ");
-        Integer marks = scanner.nextInt();
+        Integer marks = getInteger();
         Subject subject = new Subject(subjectName,marks);
         result.addSubject(subject);
     }
@@ -66,7 +66,7 @@ public class UpdateResultScreen extends BaseScreen {
         System.out.print("Subject name: ");
         String subjectName = scanner.next();
         System.out.print("Marks: ");
-        Integer marks = scanner.nextInt();
+        Integer marks = getInteger();
         Subject subject = new Subject(subjectName,marks);
         if(result.hasSubject(subject)){
             result.updateSubject(subject);

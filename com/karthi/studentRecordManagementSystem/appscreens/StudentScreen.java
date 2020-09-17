@@ -17,6 +17,10 @@ public class StudentScreen extends BaseScreen {
     protected void run() {
         StudentRecord studentRecord = appContext.getStudentRecord();
         Student student  = studentRecord.fetchStudent(appContext.getStudentID());
+        if(student==null){
+            System.out.println("Student ID not registered.");
+            return;
+        }
         System.out.println(student);
         while(true){
             System.out.println("Enter exam result id from your info: /'exit' to close: ");

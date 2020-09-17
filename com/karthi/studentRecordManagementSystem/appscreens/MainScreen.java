@@ -4,8 +4,7 @@ import java.util.Scanner;
 import java.awt.Toolkit;
 
 public class MainScreen extends BaseScreen {
-    private static final String DISPLAY_INFO = "Student Record Management Software.\nMAIN MENU.\n"
-    +"1.Admin Credentials(to Edit files)\n2.Student login\n3.Exit";
+    private static final String DISPLAY_INFO = "Student Record Management Software.\n";
     private final String PASSWORD = "ADMIN";
     
     public MainScreen(Scanner scan,AppContext appContext) {
@@ -16,8 +15,8 @@ public class MainScreen extends BaseScreen {
     protected void run() {
         boolean runFlag = true;
         while(runFlag){
-            System.out.print("Enter your option: ");
-            int option = scanner.nextInt();
+            System.out.print("MAIN MENU.\n1.Admin Credentials(to Edit files)\n2.Student login\n3.Exit\nEnter your option: ");
+            int option = getInteger();
             switch(option){
                 case 1:
                     System.out.print("Enter password: ");
@@ -34,6 +33,7 @@ public class MainScreen extends BaseScreen {
                     appContext.setStudentID(scanner.next());
                     StudentScreen studentScreen = new StudentScreen(scanner, appContext);
                     studentScreen.runScreen();
+                    appContext.setStudentID(null);
                     break;
                 case 3:
                     runFlag = false;

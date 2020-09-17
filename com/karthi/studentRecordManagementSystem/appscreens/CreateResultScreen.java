@@ -23,14 +23,14 @@ public class CreateResultScreen extends BaseScreen {
         student.addResultId(id);
         System.out.print("Enter exam name: ");
         String examName = scanner.next();
-        System.out.print("Enter no. of subjects");
-        size = scanner.nextInt();
+        System.out.print("Enter no. of subjects: ");
+        Integer subjectSize = getInteger();
         ArrayList<Subject> subjectList = new ArrayList<>();
-        for(int i=0; i<size; i++){
+        for(int i=0; i<subjectSize; i++){
             System.out.print("Subject Name: ");
             String subjectName = scanner.next();
             System.out.print("Marks: ");
-            Integer marks = scanner.nextInt();
+            Integer marks = getInteger();
             Subject subject = new Subject(subjectName,marks);
             subjectList.add(subject);
         }

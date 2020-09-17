@@ -4,7 +4,7 @@ import org.json.simple.JSONObject;
 
 public class Subject {
     private String name;
-    private int mark;
+    private Integer mark;
     
     public Subject(String n, int m){
             name = n;

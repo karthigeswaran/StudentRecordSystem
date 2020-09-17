@@ -1,0 +1,114 @@
+Admin Screen
+  1. Modify Student
+    1.1 Create
+      Enter name:
+      Enter class:
+      Enter section:
+      Enter dob:
+    1.2 Read
+      Input Enter Student ID:
+      Print Student Details
+      Option Modify Result
+        1.2.1 Create
+          Enter Exam name
+          Enter 1..N mark
+        1.2.2 Read
+          Enter Exam name
+          Enter class
+        1.2.3 Update
+        1.2.4 Delete
+      Option Read Attendance
+        Input Enter from date
+        input Enter to date
+        Print Absent dates
+    1.3 Update
+      Input Enter Student ID:
+      Options
+        1.3.1 Name
+          input until success
+        1.3.2 Class 
+          input until success
+        1.3.3 Section 
+          input until success
+        1.3.4 DOB
+          input until success
+    1.4 Delete
+        Input Enter Student ID:
+        Input yes or no
+        Print if success or goto 1.4
+  2. Modify Section
+     2.1 Create
+       Enter name: 
+       Enter class:
+     2.2 Read
+        Input Enter class
+        Input Enter section
+        Input Enter year
+        Print section info
+        2.2.1 Modify Attendance
+          Create and Update
+            Enter date:
+            Enter number of absentees
+            loop 1..N enter Student ID
+          Read
+            Input Enter date:
+            Print absentees
+        2.2.2 Result info
+     2.3 Update
+     2.4 Delete
+  3. Modify Batch
+     3.1 Create
+       Enter class:
+     3.2 Read
+     3.3 Update
+     3.4 Delete
+  4. Modify Exam
+     4.1 Create
+       Enter name:
+       Enter class: 
+     4.2 Read
+     4.3 Update
+     4.4 Delete
+       
+  5. Modify Regulation
+     5.1 Create
+       Enter year:
+       Modify Subject
+       5.1.1 Create
+         Enter name:
+       5.1.2 Read
+       5.1.3 Update
+       5.1.4 Delete  
+     5.2 Read
+     5.3 Update
+     5.4 Delete
+
+Create
+ loop N times
+  Enter x
+ if save success
+   print success message
+ else 
+   print errors
+ end
+
+ StudentCreate : {
+   options : ["name", "section", "class", "dob"]
+ } 
+ ResultCreate : {
+   "options" : ["exam_name", "class"]
+ }
+
+class CreateScreen {
+  run() {
+    Type someType = new Type();
+    for(opt_1 ... opt_N){
+      print "Enter #{opt_i}"
+      val = getInputWithCorrectType()
+      type.setOptI(val)
+    }
+  }
+}
+
+
+ 

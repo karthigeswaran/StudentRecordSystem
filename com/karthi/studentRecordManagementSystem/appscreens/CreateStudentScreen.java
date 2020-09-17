@@ -26,7 +26,7 @@ public class CreateStudentScreen extends BaseScreen {
         Student student = new Student(name, clss);
         appContext.setStudent(student);
         System.out.print("Enter no. of exams attended: ");
-        int resultSize = scanner.nextInt();
+        int resultSize = getInteger();
         for(int i=0; i<resultSize; i++){
             CreateResultScreen createResultScreen = new CreateResultScreen(scanner, appContext);
             createResultScreen.runScreen();

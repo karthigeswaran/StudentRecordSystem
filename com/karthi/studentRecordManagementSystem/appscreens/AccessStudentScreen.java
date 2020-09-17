@@ -27,7 +27,7 @@ public class AccessStudentScreen extends BaseScreen {
 		while(runFlag){
             System.out.print("1) Add new Exam Result\n2) Fetch Exam Result\n3) Delete Exam Result\n4) Save and exit\n5) Exit\n");
             System.out.print("Enter Option: ");
-			switch(scanner.nextInt()){
+			switch(getInteger()){
 				case 1:
                     CreateResultScreen createResultScreen = new CreateResultScreen(scanner, appContext);
                     createResultScreen.runScreen();
